@@ -181,7 +181,6 @@ int main() {
         cout << "按1可移除在停车的车辆" << endl;
         cout << "按2可显示当前状态" << endl;
         cin >> i;
-        cout << i << endl;
         switch(i) {
         case 0:
             cout << "请输入车牌号码" << endl;

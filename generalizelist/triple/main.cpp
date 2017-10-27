@@ -98,7 +98,7 @@ public:
         }
         if(temp->get(head->row, head->col) == 0)
             temp->set(head->row, head->col, head->val);
-        eturn temp;
+        return temp;
     }
 
 };
