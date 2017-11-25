@@ -1,12 +1,14 @@
-#ifdef BITREE
+#ifndef BITREE
+#define BITREE
 #include <iostream>
-using namespace std
+using namespace std;
     class BiTree {
     private:
         BiTree *lchild;
         BiTree *rchild;
         BiTree *parent;
         char *val;
+		iint test;
     public:
         BiTree(char v = "") {
             if(v = "") {
@@ -54,6 +56,5 @@ using namespace std
         }
 
     };
-
 
 #endif

@@ -29,17 +29,21 @@ int main() {
     int arr[] = {37, 23, 200, 17, 12, 27, 31,
                  46, 100, 0, 54
                 };
+	int arr2[] = {44,33};
     int n = sizeof(arr) / sizeof(arr[0]);
+    int n2 = sizeof(arr2) / sizeof(arr2[0]);
     cout << "default: " << endl;
     show(arr, n);
-	cout << "-----------------------" << endl;
-	// InsertSort(arr, n);
+    cout << "-----------------------" << endl;
+    // InsertSort(arr, n);
     // show(arr, n);
-	// BinaryInsert(arr, n);
-	// TwoWayInsert(arr,n);
-	ShellSortV2(arr, n);
-	// SimpleSelectSort(arr,n);
-	show(arr, n);
-
+	BinaryInsert(arr, n);
+    // TwoWayInsert(arr,n);
+    // ShellSortV2(arr, n);
+    // SimpleSelectSort(arr,n);
+	SimpleTwoSelectSort(arr,n);
+    show(arr, n);
+	SimpleTwoSelectSort(arr2,n2);
+	show(arr2,n2);
 
 }

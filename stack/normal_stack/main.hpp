@@ -1,4 +1,8 @@
+#ifndef MAIN
+#define MAIN
 #include "../../ADT/Stack.h"
+// #include <iostream>
+// using namespace std;
 template<class T>
 class SeqStack: public Stack<T> {
 private:
@@ -77,3 +81,4 @@ public:
 
 
 };
+#endif

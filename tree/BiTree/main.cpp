@@ -9,7 +9,7 @@
 
 #include <iostream>
 #include <string>
-#include "BiTree.h"
+// #include "BiTree.h"
 using namespace std;
 
 struct TreeNode {
@@ -21,42 +21,21 @@ struct TreeNode {
 
 class BiTree {
 private:
+	int i;
     TreeNode *root;
 public:
     BiTree() {
         // root = NULL;
 
     }
-    // void initBiTree(TreeNode *&node) {
-    // root = node;
-    // if(root->val == '\0'){
-    //     cout << "please enter a char for the root node value: ";
-    //     char c;
-    //     cin >> c;
-    //     root->val = c;
-    // }
-    // }
-
     void createBiTree(TreeNode *&T, TreeNode *p = NULL) {
-        // if(root == NULL) {
-        //     cout << "please init the tree first!" << endl;
-        //     return;
-        // }
-        //树不为空，则已经初始化过
-        // if( T != NULL) {
-        //     cout << "dddd" << endl;
-        //     createBiTree(T->lchild);
-        //     createBiTree(T->rchild);
-        //     return;
-        // }
-
         char v;
         cout << "please enter a character to buid the next node, input '@' or ' ' or <CR> will make the node NULL:" << endl;
         cin.get(v);
         // v = getchar();
         // cin >> v;
         if(v == '@' || v == ' ' || v == '\n') {
-            cout << "space " << endl;
+            // cout << "space " << endl;
             T = NULL;
             return;
         } else {
@@ -69,11 +48,7 @@ public:
     }
 
     void preOrderTraverse(const TreeNode *T ) {
-        // if(root == NULL) {
-        //     cout << "Please init the tree first!" << endl;
-        //     return;
-        // }
-        if(T == NULL) {
+       if(T == NULL) {
             cout << "the root node is NULL" << endl;
             return;
         }
@@ -89,9 +64,6 @@ public:
     }
 
     void clearBiTree(TreeNode *&T) {
-        //root为NULL
-        // if(root != NULL)
-        //     root = NULL;
         if(T == NULL)
             return;
         if(T->lchild != NULL)
@@ -148,19 +120,25 @@ public:
         else return false;
     }
 
+	void PostOderByNonrecursive(TreeNode *T){
+		
+
+	}
+
 };
 int main() {
     /* test input: 239  82  j  41  5  */
     BiTree biTree = BiTree();
+
     TreeNode * r = new TreeNode;
     // biTree.initBiTree(r);
     biTree.createBiTree(r);
     biTree.preOrderTraverse(r);
-    biTree.getValue(r, r->rchild->rchild->rchild);
-	TreeNode *testroot = biTree.getRoot(r->rchild);
-	cout << testroot->val << endl;
-	cout << biTree.getDepth(r);
-	biTree.clearBiTree(r);
-	biTree.preOrderTraverse(r);
+    // biTree.getValue(r, r->rchild->rchild->rchild);
+	// TreeNode *testroot = biTree.getRoot(r->rchild);
+	// cout << testroot->val << endl;
+	// cout << biTree.getDepth(r);
+	// biTree.clearBiTree(r);
+	// biTree.preOrderTraverse(r);
 
 }
