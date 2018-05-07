@@ -1,9 +1,8 @@
-#include <iostream>
-#include "List.h"
-using namespace std;
+#ifndef /HOME/JEFUNG/REPOS/DATA-STRUCT/LIST/COMBINE_LIST/LLIST
+#define /HOME/JEFUNG/REPOS/DATA-STRUCT/LIST/COMBINE_LIST/LLIST
 
-template <typename E> class LList:public List<E>{
-		public:
+
+#endif
 void test(){
 	cin << this->data << endl;
 }

@@ -1,0 +1,6 @@
+cscope*
+*
+!*.cpp
+!*.hpp
+!*.h
+!README.md

@@ -70,6 +70,5 @@ int main() {
     const char *a = "tesoi";
     String *s = new String("sssss");
     cout << s->size;
-    char c = s[2];
     s->show();
 }

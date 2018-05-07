@@ -1,11 +1,15 @@
-#include "main.h"
-int main(){
-	int ;
-	LList<int> *test = new LList<int>;
-	test->data = 2222;
-	test->test();
-	i
-		dd
-		 mw
-}
+/*
+* auth        : Jefung
+* version     : v1.0
+* description : 
+*     
+* analyse     : 
+*     
+*/
 
+#include <iostream>
+using namespace std;
+
+int main(int argc, char *argv[] ){
+     
+}

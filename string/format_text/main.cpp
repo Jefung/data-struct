@@ -9,6 +9,7 @@
 
 #include <iostream>
 #include <string>
+#include <string.h>
 using namespace std;
 const int maxworklength = 12;
 const int maxlinelength = 60;
@@ -18,17 +19,18 @@ struct word {
 };
 
 class TextFormat {
-private:
+  private:
     char line[maxlinelength];
     int lpos;
-public:
+
+  public:
     TextFormat() {
         lpos = 0;
     }
     void getInputText() {
-        word  w;
+        word w;
         w = getWord();
-        while(w.length != 0) {
+        while (w.length != 0) {
             lineAppend(w);
             w = getWord();
         }
@@ -39,10 +41,10 @@ public:
         w.length = 0;
         cin >> c;
         //去除字符前的空格
-        while( c == ' ' || c == '\n' ) {
+        while (c == ' ' || c == '\n') {
             cin.get(c);
         }
-        while(  c != ' ' && c != '\n') {
+        while (c != ' ' && c != '\n') {
             w.content[w.length] = c;
             w.length++;
             // cin >> c;
@@ -54,23 +56,22 @@ public:
         return w;
     }
 
-    char* showWord(word w) {
+    char *showWord(word w) {
         char *str;
-        for(int i = 0; i < w.length; i++) {
+        for (int i = 0; i < w.length; i++) {
             str[i] = w.content[i];
         }
         return str;
-
     }
 
     void lineAppend(word w) {
-        if(strcmp(showWord(w), "/PAR/")) {
+        if (strcmp(showWord(w), "/PAR/")) {
             cout << endl;
             lpos = 0;
             return;
         }
 
-        if(maxlinelength - lpos >=  w.length) {
+        if (maxlinelength - lpos >= w.length) {
             cout << showWord(w) << " ";
             lpos = lpos + w.length + 1;
         } else {
@@ -79,14 +80,10 @@ public:
             cout << showWord(w) << " ";
             lpos = lpos + w.length + 1;
         }
-
-
-
     }
 };
 
 int main() {
     TextFormat text = TextFormat();
     text.getInputText();
-
 }
