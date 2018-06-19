@@ -4,3 +4,4 @@ cscope*
 !*.hpp
 !*.h
 !README.md
+*.out

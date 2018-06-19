@@ -48,4 +48,5 @@ ps: 由于环境配置原因，头文件后缀名为.hpp,由于方便，直接�
 * greedy: 贪婪算法
 	* activity_selector: 活动选择问题
 	* complete_backpack: 完全背包问题 
+	* MultiMachineSchedul: 多机调度问题
 
