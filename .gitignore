@@ -1,7 +1,5 @@
-cscope*
-*
 !*.cpp
 !*.hpp
 !*.h
 !README.md
-*.out
+!data_struct
