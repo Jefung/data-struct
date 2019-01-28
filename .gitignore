@@ -1,7 +1,21 @@
-*
-!*.cpp
-!*.h
-!*.hpp
+# comment: .gitignore模板
+# JetBrain系列ide
+.idea
+cmake-build-debug
+
+# 构建以及部署
+dist
+build
+eggs/
+.eggs/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# vim缓存文件
 *.swp
 *.swo
+
+# C extensions
+*.so
 
